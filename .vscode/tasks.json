@@ -19,7 +19,7 @@
                 "${workspaceFolder}/obj/${fileBasenameNoExtension}.exe"
             ],
             "options": {
-                "cwd": "C:/msys64/mingw64/bin"
+                "cwd": "${fileDirname}" //"C:/msys64/mingw64/bin"
             },
             "problemMatcher": [
                 "$gcc"
