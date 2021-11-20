@@ -8,7 +8,7 @@ LectorPersonas::LectorPersonas(std::string nombreArchivo)
     this->nombreArchivo = nombreArchivo;
 }
 
-void LectorPersonas::abrirArchivo()
+bool LectorPersonas::abrirArchivo()
 {
     archivoEntrada.open(nombreArchivo, std::ios::in | std::ios::binary);
 
@@ -16,6 +16,8 @@ void LectorPersonas::abrirArchivo()
     {
         throw ExcepcionNoSePuedeAbrirArchivo();
     }
+
+    return archivoEntrada.is_open();
 }
 
 Persona LectorPersonas::leerPersonaPosicion(int posicion)
@@ -49,8 +51,10 @@ Persona LectorPersonas::leerPersonaPosicion(int posicion)
 
 }
 
-void LectorPersonas::cerrar()
+bool LectorPersonas::cerrar()
 {
     archivoEntrada.close();
+
+    return !archivoEntrada.is_open();
 }
 

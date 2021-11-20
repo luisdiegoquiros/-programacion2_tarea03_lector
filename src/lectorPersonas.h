@@ -17,9 +17,9 @@ class LectorPersonas
 public:
     LectorPersonas(std::string nombreArchivo);
 
-    void abrirArchivo();
+    bool abrirArchivo();
     Persona leerPersonaPosicion(int posicion);
-    void cerrar();
+    bool cerrar();
 };
 
 #endif
