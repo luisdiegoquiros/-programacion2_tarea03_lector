@@ -1,4 +1,4 @@
-#include "escritorPersonas.h"
+#include "escritorPersonas-ProgramaEscritor.h"
 #include "./excepciones/excepcionNoSePuedeAbrirArchivo.h"
 
 EscritorPersonas::EscritorPersonas(std::string nombreArchivo)
